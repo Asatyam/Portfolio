@@ -1,9 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-
-
+import React,{useState, useEffect} from "react";
+import styles from './Name.module.css'
+import { motion } from "framer-motion";
 export default function Welcome(){
 
+
+
+    const roles = ['Full Stack Web Developer', 'Student','DevOps Enthusiast']
+    const [curr, setCurr] = useState(roles[0]);
+
+    useEffect(() => {
+        let i = 0;
+      const interval = setInterval(() => {
+        setCurr(roles[i])
+        i = (i + 1)%3;
+      }, 4000);
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
     return (
       <section className="m-4 flex justify-center font-bold  ">
         <div className=" items-center m-2 justify-center  grid gap-2  md:grid-cols-2">
@@ -16,8 +31,24 @@ export default function Welcome(){
           </div>
           <div>
             <h1 className="text-2xl">Hey 👋🏻 !</h1>
-            <h1 className="text-6xl">I am Satyam Agrawal</h1>
-            <h1 className="my-5 text-3xl">I am also a Web Developer/Student/Devops Enthusiast</h1>
+            <h1 className="text-6xl">I am</h1>
+            <div className={styles.content}>
+              <h2>Satyam Agrawal</h2>
+              <h2>Satyam Agrawal</h2>
+            </div>
+            <h1 className="my-2 text-3xl">
+              <div className="flex gap-2">
+                <div>I am a </div>
+                <div className="">
+                  <motion.div
+                    animate = {{scale:[0, 0.5,1, 0.5, 0],}}
+                    transition={{ease:'backInOut',duration:4, repeat:Infinity }}
+                  >
+                    {curr}
+                  </motion.div>
+                </div>
+              </div>
+            </h1>
           </div>
         </div>
       </section>

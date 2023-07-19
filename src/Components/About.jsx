@@ -1,18 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React from 'react';
+import { motion } from 'framer-motion';
 
-export default function About(){
-
-    return (
+export default function About() {
+  return (
+    <motion.div
+    >
       <section id="about" className="w-full flex flex-col items-center">
         <h1 className=" my-2 text-center text-3xl font-bold ">
           <span className="text-3xl font-extralight">I </span>About Me
         </h1>
         <div className=" w-fit text-2xl border-2 p-2 m-2 flex flex-col md:justify-center md:items-center ">
-          <button className="rounded transition items-center gap-2 flex text-sm  border-2  w-fit self-center p-2 hover:bg-blue-600 active:bg-blue-300 ">
-            <img className="h-8" src='/images/download.svg' alt='download icon'/>
+          <button className="relative shadow-[0px_0px_6px_1px] rounded transition items-center gap-2 flex text-sm  border-2  w-fit self-center p-2 hover:bg-blue-600 active:bg-blue-300 ">
+            <img
+              className="h-8"
+              src="/images/download.svg"
+              alt="download icon"
+            />
             <a download href="./SatyamAgrawal_Resume.pdf">
-                Resuḿe
+              Resuḿe
             </a>
           </button>
           <ul className=" p-2">
@@ -39,5 +45,6 @@ export default function About(){
           </ul>
         </div>
       </section>
-    );
+    </motion.div>
+  );
 }
