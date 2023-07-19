@@ -15,8 +15,8 @@ export default function SingleProject({name, title,  description,github, live}){
             <div className=" grid  mx-4">
                     <h1 className="text-3xl font-extrabold">{title}</h1>
                     <div className="flex gap-2">
-                        <a href={github} target="_blank"><img className="h-8 " src='/images/github.svg'/></a>
-                        <a href={live} target="_blank"><img className="h-8 " src='/images/link.png'/></a>
+                        <a href={github} target="_blank"><img className="h-8 " src='/images/github.svg' alt='github-link'/></a>
+                        <a href={live} target="_blank"><img className="h-8 " src='/images/link.png' alt='live link'/></a>
                     </div>
                 <ul className=" text-lg font-medium grid  ">
                    {description.map((descr)=><li key= {i++} className="flex gap-2"> <span> ➣ </span> {descr}</li>)} 
