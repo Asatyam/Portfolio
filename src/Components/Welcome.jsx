@@ -30,19 +30,21 @@ export default function Welcome(){
             />
           </div>
           <div>
-            <h1 className="text-2xl">Hey 👋🏻 !</h1>
-            <h1 className="text-6xl">I am</h1>
-            <div className={styles.content}>
-              <h2>Satyam Agrawal</h2>
-              <h2>Satyam Agrawal</h2>
-            </div>
-            <h1 className="my-2 text-3xl">
+            <h1 className="text-2xl">Hey 👋🏻 ! I am</h1>
+            <h1 className="text-3xl"></h1>
+            <h1 className="text-5xl">Satyam Agrawal</h1>
+
+            <h1 className="my-2 text-xl">
               <div className="flex gap-2">
                 <div>I am a </div>
                 <div className="">
                   <motion.div
-                    animate = {{scale:[0, 0.5,1, 0.5, 0],}}
-                    transition={{ease:'backInOut',duration:4, repeat:Infinity }}
+                    animate={{ scale: [0, 0.5, 1, 0.5, 0] }}
+                    transition={{
+                      ease: 'backInOut',
+                      duration: 4,
+                      repeat: Infinity,
+                    }}
                   >
                     {curr}
                   </motion.div>

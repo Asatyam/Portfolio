@@ -17,11 +17,11 @@ export default function About() {
               src="/images/download.svg"
               alt="download icon"
             />
-            <a download href="./SatyamAgrawal_Resume.pdf">
+            <a download href="/SatyamAgrawal_Resume.pdf">
               Resuḿe
             </a>
           </button>
-          <ul className=" p-2">
+          <ul className=" text-xl p-2">
             <li className="flex gap-2">
               <span>➣</span> Junior at IIIT-Gwalior pursuing Bachelor of
               Technology in IT

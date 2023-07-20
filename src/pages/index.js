@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className=" text-white p-2 min-h-[100vh] bg-gradient-to-b from-blue-800 to-indigo-950">
+    <main className=" text-white p-2 min-h-[100vh] bg-gradient-to-b from-blue-700 to-indigo-950">
       <Navigation />
       <Welcome />
       <About id="about" />
